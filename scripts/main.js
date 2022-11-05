@@ -3,7 +3,8 @@ const { createApp } = Vue
 const vueApp = createApp({
   data() {
     return {
-      langs: ['en', 'fr']
+      langs: ['en', 'fr'],
+      age: new Date().getFullYear() - 1990
     }
   },
   mounted() {
