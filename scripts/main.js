@@ -4,7 +4,38 @@ const vueApp = createApp({
   data() {
     return {
       langs: ['en', 'fr'],
-      age: new Date().getFullYear() - 1990
+      age: new Date().getFullYear() - 1990,
+      projects: {
+        freelance: [
+          {
+            name: 'Bizzybird',
+            description: 'projects.bizzy.description',
+            tasks: ['projects.tasks'],
+            tools: 'Ionic Framework, Angular, Sass, Capacitor',
+            links: {
+              android: "https://play.google.com/store/apps/details?id=tn.simple.bizzybird&hl=fr&gl=US",
+              ios: "https://apps.apple.com/us/app/bizzybird/id1566802800?platform=iphone"
+            }
+          },
+          {
+            name: 'Haval.tn - Greatwall.tn - Foton.tn',
+            tasks: ['projects.haval.description'],
+            tools: 'HTML, Css, Javascript',
+            links: {
+              web: "https://haval.tn"
+            }
+          },
+          {
+            name: 'Zsexpress',
+            description: 'projects.zs.description',
+            tasks: ['projects.zs.task1', 'projects.zs.task2'],
+            tools: 'Laravel, Vue, Sass, Ionic Framework, Capacitor',
+            links: {
+              web: "http://zsexpress-tn.com"
+            }
+          },
+        ]
+      }
     }
   },
   mounted() {
@@ -17,6 +48,9 @@ const vueApp = createApp({
   methods: {
     switchLanguage(lang) {
       this.$i18n.locale = lang
+    },
+    getTools(tools) {
+      return tools.split(',').map(t => `<div class='badge bg-primary me-1'>${t}</div>`).join('')
     }
   }
 })
@@ -42,6 +76,9 @@ const messages = {
     },
     work: {
       title: 'Work Experience',
+      projects: "Projects",
+      tasks: "Tasks",
+      tools: "Tools",
       freelance: {
         content: "I start my professional career with small projects as a freelancer"
       },
@@ -77,10 +114,25 @@ const messages = {
       yourEmail: 'Your Email',
       yourMessage: 'Your Message',
       copyright: 'All rights reserved.'
+    },
+    projects: {
+      visit: "Web Site",
+      bizzy: {
+        description: "A calendar-based app that helps you find, create, and share exciting events"
+      },
+      haval: {
+        description: "Template integration"
+      },
+      zs: {
+        description: "Order tracking system",
+        task1: "Development of the system for the admin and the customers and a mobile application for the delivery men",
+        task2: "Configuration du vps et deployment du système"
+      },
+      tasks: "Développer une application mobile android et ios"
     }
   },
   fr: {
-    present: 'Présente',
+    present: 'présente',
     header: {
       skills: 'Développeur Web & Mobile',
       download: 'Télécharger',
@@ -88,10 +140,10 @@ const messages = {
     },
     about: {
       title: 'À propos de moi',
-      content: "Bonjour! Je suis Mohamed Fahmi Chaar. Je suis passionné par le développement Web & Mobile. Je suis un développeur Full Stack qualifié.",
+      content: "Bonjour! Je suis Mohamed Fahmi Chaar. Je suis passionné par le développement Web & Mobile. Je suis un développeur Full Stack.",
       age: 'Age',
       email: 'Email',
-      phone: 'Téléphoner',
+      phone: 'Téléphone',
       address: 'Adresse'
     },
     skills: {
@@ -99,6 +151,9 @@ const messages = {
     },
     work: {
       title: "L'expérience professionnelle",
+      projects: "Projets",
+      tasks: "Tâches",
+      tools: "Outils",
       freelance: {
         content: "Je commence ma carrière professionnelle par de petits projets en tant qu'indépendant"
       },
@@ -134,6 +189,21 @@ const messages = {
       yourEmail: 'Votre e-mail',
       yourMessage: 'Votre message',
       copyright: 'Tous droit réserver.'
+    },
+    projects: {
+      visit: "Site Web",
+      bizzy: {
+        description: "Application basée sur un calendrier qui vous aide à trouver, créer et partager des événements passionnants",
+      },
+      haval: {
+        description: "Intégration de templates"
+      },
+      zs: {
+        description: "Systéme de suivi de commande",
+        task1: "Développement du systeme pour l'admin et les client et d'une application mobile pour les livreurs",
+        task2: "Configuration du vps et deployment du système"
+      },
+      tasks: "Develop android and ios mobile application"
     }
   }
 }

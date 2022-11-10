@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mohamed Fahmi Chaar</title>
+  <title>Mohamed Fahmi CHAAR</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
@@ -36,14 +36,7 @@
       <div class="container text-center text-lg-left">
         <div class="py-3 clearfix">
           <h1 class="site-title mb-0 d-flex align-items-center">
-            <div>Mohamed Fahmi Chaar - CV</div>
-            <!-- <div class="mx-2">
-              <div class="btn btn-sm" v-for="lang in langs" :key="lang"
-                :class="[{'disabled': $i18n.locale === lang}, $i18n.locale === lang ? 'btn-info' : 'btn-outline-info']" 
-                @click="switchLanguage(lang)">
-                {{ lang }}
-              </div>
-            </div> -->
+            <div>Mohamed Fahmi CHAAR - CV</div>
             <select class="text-capitalize mx-2 form-select form-select-sm w-auto btn-outline-danger" v-model="$i18n.locale">
               <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
                 {{ lang }}
@@ -55,12 +48,6 @@
               <ul class="nav justify-content-center">
                 <li class="nav-item"><a target="_blank" class="nav-link" href="https://twitter.com/fahmichaar" title="Twitter"><i
                       class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
-                </li>
-                <li class="nav-item"><a target="_blank" class="nav-link" href="https://www.facebook.com/mohamedfahmi.chaar/" title="Facebook"><i
-                      class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a target="_blank" class="nav-link" href="https://www.instagram.com/fahmichaar/" title="Instagram"><i
-                      class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a>
                 </li>
                 <li class="nav-item"><a target="_blank" class="nav-link" href="https://github.com/fahmichaar" title="Github"><i
                       class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
@@ -76,11 +63,8 @@
         <div class="cover shadow-lg bg-white">
           <div class="cover-bg p-3 p-lg-4 text-white">
             <div class="row">
-              <!-- <div class="col-lg-4 col-md-5">
-                <div class="avatar hover-effect bg-white shadow-sm p-1"><img src="images/avatar.jpg" width="200" height="200"/></div>
-              </div> -->
               <div class="col-lg-12 col-md-12 text-center">
-                <h2 class="h1 mt-2" data-aos="fade-down" data-aos-delay="0">Mohamed Fahmi Chaar</h2>
+                <h2 class="h1 mt-2" data-aos="fade-down" data-aos-delay="0">Mohamed Fahmi CHAAR</h2>
                 <p data-aos="fade-down" data-aos-delay="100">{{ $t('header.skills') }}</p>
                 <div class="d-print-none" data-aos="fade-down" data-aos-delay="200"><a
                     class="btn btn-light text-dark shadow-sm mt-1 me-1" href="right-resume.pdf" target="_blank">{{ $t('header.download') }}
@@ -96,12 +80,12 @@
               </div>
               <div class="col-md-5 offset-md-1">
                 <div class="row mt-2">
-                  <div class="col-sm-4">
+                  <!-- <div class="col-sm-4">
                     <div class="pb-1">{{ $t('about.age') }}</div>
                   </div>
                   <div class="col-sm-8">
                     <div class="pb-1 text-secondary">{{ age }}</div>
-                  </div>
+                  </div> -->
                   <div class="col-sm-4">
                     <div class="pb-1">{{ $t('about.email') }}</div>
                   </div>
@@ -118,7 +102,7 @@
                     <div class="pb-1">{{ $t('about.address') }}</div>
                   </div>
                   <div class="col-sm-8">
-                    <div class="pb-1 text-secondary">12, rue esgahier lemrah, Rades, Tunis</div>
+                    <div class="pb-1 text-secondary">Rades, Ben Arous, Tunis</div>
                   </div>
                 </div>
               </div>
@@ -234,12 +218,36 @@
                   <div class="h5 mb-1">Freelancer</div>
                   <div class="text-muted text-small mb-2">2012 - 2015</div>
                   <div>{{ $t('work.freelance.content') }}</div>
+                  <hr>
+                  <h5 class="my-1">{{ $t('work.projects') }}</h5>
+                  <div class="mb-3" v-for="(project, index) in projects.freelance" :key="'freelance-'+index">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h6 class="text-danger m-0">{{ project.name }}</h6>
+                      <div>
+                        <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android" :href="project.links.android" target="_blank">Play Store</a>
+                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios" target="_blank">App Store</a>
+                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web" target="_blank">{{ $t('projects.visit') }}</a>
+                      </div>
+                    </div>
+                    <div class="text-small text-muted">{{ $t(project.description) }}</div>
+                    <div class="info d-flex align-items-center gap-1">
+                      <div class="label text-muted">{{ $t('work.tasks') }}:</div>
+                      <div class="value" v-for="task in project.tasks" :key="task">
+                        {{ $t(task) }}
+                      </div>
+                    </div>
+                    <div class="info d-flex align-items-center gap-1">
+                      <div class="label text-muted">{{ $t('work.tools') }}:</div>
+                      <div class="value" v-html="getTools(project.tools)"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <hr class="d-print-none" />
           <div class="page-break"></div>
-          <div class="education-section px-3 px-lg-4 pb-4">
+          <div class="education-section px-3 px-lg-4">
             <h2 class="h3 mb-4">{{ $t('education.title') }}</h2>
             <div class="timeline">
               <div class="timeline-card timeline-card-success card shadow-sm">
@@ -262,13 +270,6 @@
                   <div class="text-muted text-small mb-2">2002 - 2007</div>
                   <div></div>
                 </div>
-              </div>
-              <div class="timeline-card timeline-card-success card shadow-sm">
-                <div class="card-body">
-                  <div class="h5 mb-1">{{ $t('education.primary.title') }} <span class="text-muted h6">{{ $t('education.primary.subtitle') }}</span>
-                  </div>
-                  <div class="text-muted text-small mb-2">1996 - 2002</div>
-                  <div></div>
               </div>
             </div>
           </div>
@@ -300,7 +301,7 @@
               <div class="col">
                 <div class="mt-2">
                   <h3 class="h6">{{ $t('about.address') }}</h3>
-                  <div class="pb-2 text-secondary">12, rue esgahier lemrah, Rades, Tunis</div>
+                  <div class="pb-2 text-secondary">Rades, Ben Arous, Tunis</div>
                   <h3 class="h6">{{ $t('about.phone') }}</h3>
                   <a href="tel:+216 50 611 376" target="_blank" class="d-block pb-2 text-secondary">+216 50 611 376</a>
                   <h3 class="h6">{{ $t('about.email') }}</h3>
@@ -313,16 +314,6 @@
                     <div class="mb-2">
                       <div class="text-dark"><i
                           class="fab fa-twitter mr-1"></i><span>https://twitter.com/fahmichaar</span>
-                      </div>
-                    </div>
-                    <div class="mb-2">
-                      <div class="text-dark"><i
-                          class="fab fa-facebook mr-1"></i><span>https://www.facebook.com/mohamedfahmi.chaar/</span>
-                      </div>
-                    </div>
-                    <div class="mb-2">
-                      <div class="text-dark"><i
-                          class="fab fa-instagram mr-1"></i><span>https://www.instagram.com/fahmichaar/</span>
                       </div>
                     </div>
                     <div class="mb-2">
@@ -341,19 +332,12 @@
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
         <div class="my-3">
-          <div class="h4">Mohamed Fahmi Chaar</div>
+          <div class="h4">Mohamed Fahmi CHAAR</div>
           <div class="footer-nav">
             <nav role="navigation">
               <ul class="nav justify-content-center">
                 <li class="nav-item"><a class="nav-link" href="https://twitter.com/fahmichaar" title="Twitter"><i
                       class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/mohamedfahmi.chaar/" title="Facebook"><i
-                      class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/fahmichaar/"
-                    title="Instagram"><i class="fab fa-instagram"></i><span
-                      class="menu-title sr-only">Instagram</span></a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="https://github.com/FahmiChaar" title="Github"><i
                       class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
@@ -364,7 +348,7 @@
         </div>
         <div class="text-small">
           <div class="mb-1">Moahamed Fahmi Chaar &copy; {{ $t('contact.copyright') }}</div>
-          <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+          <!-- <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div> -->
         </div>
       </div>
     </footer>
