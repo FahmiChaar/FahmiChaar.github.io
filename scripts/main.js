@@ -29,9 +29,9 @@ const vueApp = createApp({
             name: 'Zsexpress',
             description: 'projects.zs.description',
             tasks: ['projects.zs.task1', 'projects.zs.task2'],
-            tools: 'Laravel, Vue, Sass, Ionic Framework, Capacitor',
+            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
             links: {
-              web: "http://zsexpress-tn.com"
+              web: "http://zs-express-tn.com"
             }
           },
         ]
@@ -199,7 +199,7 @@ const messages = {
         description: "Intégration de templates"
       },
       zs: {
-        description: "Systéme de suivi de commande",
+        description: "Systéme de suivi de colis",
         task1: "Développement du systeme pour l'admin et les client et d'une application mobile pour les livreurs",
         task2: "Configuration du vps et deployment du système"
       },

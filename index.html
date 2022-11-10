@@ -229,11 +229,13 @@
                         <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web" target="_blank">{{ $t('projects.visit') }}</a>
                       </div>
                     </div>
-                    <div class="text-small text-muted">{{ $t(project.description) }}</div>
-                    <div class="info d-flex align-items-center gap-1">
+                    <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
+                    <div class="info d-flex align-items-start gap-1">
                       <div class="label text-muted">{{ $t('work.tasks') }}:</div>
-                      <div class="value" v-for="task in project.tasks" :key="task">
-                        {{ $t(task) }}
+                      <div>
+                        <div class="value" v-for="task in project.tasks" :key="task">
+                          ‣ {{ $t(task) }}
+                        </div>
                       </div>
                     </div>
                     <div class="info d-flex align-items-center gap-1">
