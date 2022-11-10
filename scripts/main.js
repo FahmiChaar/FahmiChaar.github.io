@@ -34,6 +34,13 @@ const vueApp = createApp({
               web: "http://zs-express-tn.com"
             }
           },
+          {
+            name: 'Foodex',
+            description: 'projects.foodex.description',
+            tasks: ['projects.tasks'],
+            tools: 'React Native',
+            links: {}
+          },
         ]
       }
     }
@@ -50,7 +57,7 @@ const vueApp = createApp({
       this.$i18n.locale = lang
     },
     getTools(tools) {
-      return tools.split(',').map(t => `<div class='badge bg-primary me-1'>${t}</div>`).join('')
+      return tools.split(',').map(t => `<div class='badge bg-primary me-1' style='font-weight: normal;'>${t}</div>`).join('')
     }
   }
 })
@@ -126,9 +133,12 @@ const messages = {
       zs: {
         description: "Order tracking system",
         task1: "Development of the system for the admin and the customers and a mobile application for the delivery men",
-        task2: "Configuration du vps et deployment du système"
+        task2: "vps configuration and system deployment"
       },
-      tasks: "Développer une application mobile android et ios"
+      foodex: {
+        description: "Food delivery mobile application"
+      },
+      tasks: "Develop android and ios mobile application"
     }
   },
   fr: {
@@ -203,7 +213,10 @@ const messages = {
         task1: "Développement du systeme pour l'admin et les client et d'une application mobile pour les livreurs",
         task2: "Configuration du vps et deployment du système"
       },
-      tasks: "Develop android and ios mobile application"
+      foodex: {
+        description: "Application mobile de livraison de nourriture"
+      },
+      tasks: "Développer une application mobile android et ios"
     }
   }
 }

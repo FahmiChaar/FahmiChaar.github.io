@@ -217,8 +217,7 @@
                 <div class="card-body">
                   <div class="h5 mb-1">Freelancer</div>
                   <div class="text-muted text-small mb-2">2012 - 2015</div>
-                  <div>{{ $t('work.freelance.content') }}</div>
-                  <hr>
+                  <!-- <div>{{ $t('work.freelance.content') }}</div> -->
                   <h5 class="my-1">{{ $t('work.projects') }}</h5>
                   <div class="mb-3" v-for="(project, index) in projects.freelance" :key="'freelance-'+index">
                     <div class="d-flex align-items-center justify-content-between">
@@ -254,22 +253,22 @@
             <div class="timeline">
               <div class="timeline-card timeline-card-success card shadow-sm">
                 <div class="card-body">
-                  <div class="h5 mb-1">{{ $t('education.self.title') }} <span class="text-muted h6">{{ $t('education.self.subtitle') }}</span></div>
-                  <div class="text-muted text-small mb-2">2011 - {{ $t('present') }}</div>
+                  <div class="h5 mb-1">{{ $t('education.self.title') }}</div>
+                  <div class="text-muted text-small">2011 - {{ $t('present') }}</div>
                   <div></div>
                 </div>
               </div>
               <div class="timeline-card timeline-card-success card shadow-sm">
                 <div class="card-body">
                   <div class="h5 mb-1">{{ $t('education.bac.title') }} <span class="text-muted h6">{{ $t('education.bac.subtitle') }}</span></div>
-                  <div class="text-muted text-small mb-2">2007 - 2011</div>
+                  <div class="text-muted text-small">2007 - 2011</div>
                   <div></div>
                 </div>
               </div>
               <div class="timeline-card timeline-card-success card shadow-sm">
                 <div class="card-body">
                   <div class="h5 mb-1">{{ $t('education.secondary.title') }} <span class="text-muted h6">{{ $t('education.secondary.subtitle') }}</span></div>
-                  <div class="text-muted text-small mb-2">2002 - 2007</div>
+                  <div class="text-muted text-small">2002 - 2007</div>
                   <div></div>
                 </div>
               </div>
