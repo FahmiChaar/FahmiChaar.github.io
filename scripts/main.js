@@ -10,7 +10,7 @@ const vueApp = createApp({
           {
             name: 'Bizzybird',
             description: 'projects.bizzy.description',
-            tasks: ['projects.tasks'],
+            tasks: ['projects.mobDevTasks'],
             tools: 'Ionic Framework, Angular, Sass, Capacitor',
             links: {
               android: "https://play.google.com/store/apps/details?id=tn.simple.bizzybird&hl=fr&gl=US",
@@ -28,7 +28,7 @@ const vueApp = createApp({
           {
             name: 'Zsexpress',
             description: 'projects.zs.description',
-            tasks: ['projects.zs.task1', 'projects.zs.task2'],
+            tasks: ['projects.zs.task1', 'projects.vpsTasks'],
             tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
             links: {
               web: "http://zs-express-tn.com"
@@ -37,8 +37,53 @@ const vueApp = createApp({
           {
             name: 'Foodex',
             description: 'projects.foodex.description',
-            tasks: ['projects.tasks'],
+            tasks: ['projects.mobDevTasks'],
             tools: 'React Native',
+            links: {}
+          },
+        ],
+        converto: [
+          {
+            name: 'Miqat',
+            description: 'projects.miqat.description',
+            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
+            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
+            links: {
+              android: "https://play.google.com/store/apps/details?id=tn.converto.miqat&hl=fr&gl=US"
+            }
+          },
+          {
+            name: "Children's Boulevard",
+            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
+            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
+            links: {
+              android: "https://play.google.com/store/apps/details?id=tn.converto.cb&hl=fr&gl=US"
+            }
+          },
+          {
+            name: "SunnApp",
+            description: "projects.description",
+            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
+            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
+            links: {
+              android: "https://play.google.com/store/apps/details?id=com.sunnapp&hl=fr&gl=US",
+              ios: "https://apps.apple.com/us/app/sunnapp-horaires-de-pri%C3%A8re/id1597447110?platform=iphone"
+            }
+          },
+          {
+            name: "Editions Akhira",
+            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
+            tools: 'Laravel, Inersia js, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
+            links: {
+              android: "https://play.google.com/store/apps/details?id=com.edition.akhira&hl=fr&gl=US",
+              ios: "https://apps.apple.com/fr/app/editions-akhira/id1593373530?platform=iphone"
+            }
+          },
+          {
+            name: "projects.hospital.name",
+            description: "projects.hospital.description",
+            tasks: ['projects.frontDev', 'projects.backDev', 'projects.vpsTasks'],
+            tools: 'Laravel, Vue, Vuetify, Sass',
             links: {}
           },
         ]
@@ -133,12 +178,26 @@ const messages = {
       zs: {
         description: "Order tracking system",
         task1: "Development of the system for the admin and the customers and a mobile application for the delivery men",
-        task2: "vps configuration and system deployment"
       },
       foodex: {
         description: "Food delivery mobile application"
       },
-      tasks: "Develop android and ios mobile application"
+      miqat: {
+        description: "The first application that compares direct Umrah offers and reservations"
+      },
+      sunnapp: {
+        description: 'Prayer Times, Qibla, Quran, Invocations, Quiz'
+      },
+      hospital: {
+        name: 'Course management system',
+        description: 'Course management system (creation, schedule, reservation)'
+      },
+      vpsTasks: "vps configuration and Backend deployment",
+      mobDevTasks: "Develop android and ios mobile application",
+      androidDeploy: "Deployment on play store",
+      storesDeploy: "Deployment on stores (play store, app store)",
+      backDev: "Back-end development",
+      frontDev: "Front-end development"
     }
   },
   fr: {
@@ -211,12 +270,26 @@ const messages = {
       zs: {
         description: "Systéme de suivi de colis",
         task1: "Développement du systeme pour l'admin et les client et d'une application mobile pour les livreurs",
-        task2: "Configuration du vps et deployment du système"
       },
       foodex: {
         description: "Application mobile de livraison de nourriture"
       },
-      tasks: "Développer une application mobile android et ios"
+      miqat: {
+        description: "La première application qui compare les offres et les réservations directes de Omra"
+      },
+      sunnapp: {
+        description: 'Horaires de prière, Qibla, Quran, Invocations, Quiz'
+      },
+      hospital: {
+        name: 'Système de gestion des cours',
+        description: 'Système de gestion des cours (création, planning, réservation)'
+      },
+      vpsTasks: "Configuration du vps et deployment du Backend",
+      mobDevTasks: "Développer une application mobile android et ios",
+      androidDeploy: "Déploiement sur play store",
+      storesDeploy: "Déploiement sur les stores (play store, app store)",
+      backDev: "Développement du back-end",
+      frontDev: "Développement du front-end"
     }
   }
 }

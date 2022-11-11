@@ -210,7 +210,31 @@
                 <div class="card-body">
                   <div class="h5 mb-1">{{ $t('work.converto.title') }} <span class="text-muted h6">{{ $t('work.converto.company') }}</span></div>
                   <div class="text-muted text-small mb-2">2015 - {{ $t('present') }}</div>
-                  <div>{{ $t('work.converto.content') }}</div>
+                  <!-- <div>{{ $t('work.converto.content') }}</div> -->
+                  <h5 class="my-1">{{ $t('work.projects') }}</h5>
+                  <div class="mb-3" v-for="(project, index) in projects.converto" :key="'converto-'+index">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
+                      <div>
+                        <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android" :href="project.links.android" target="_blank">Play Store</a>
+                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios" target="_blank">App Store</a>
+                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web" target="_blank">{{ $t('projects.visit') }}</a>
+                      </div>
+                    </div>
+                    <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
+                    <div class="info d-flex align-items-start gap-1">
+                      <div class="label text-muted">{{ $t('work.tasks') }}:</div>
+                      <div class="mb-1">
+                        <div class="value" v-for="task in project.tasks" :key="task">
+                          ‣ {{ $t(task) }}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info d-flex align-items-center gap-1">
+                      <div class="label text-muted">{{ $t('work.tools') }}:</div>
+                      <div class="value" v-html="getTools(project.tools)"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="timeline-card timeline-card-primary card shadow-sm">
@@ -221,7 +245,7 @@
                   <h5 class="my-1">{{ $t('work.projects') }}</h5>
                   <div class="mb-3" v-for="(project, index) in projects.freelance" :key="'freelance-'+index">
                     <div class="d-flex align-items-center justify-content-between">
-                      <h6 class="text-danger m-0">{{ project.name }}</h6>
+                      <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
                       <div>
                         <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android" :href="project.links.android" target="_blank">Play Store</a>
                         <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios" target="_blank">App Store</a>
@@ -231,7 +255,7 @@
                     <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
                     <div class="info d-flex align-items-start gap-1">
                       <div class="label text-muted">{{ $t('work.tasks') }}:</div>
-                      <div>
+                      <div class="mb-1">
                         <div class="value" v-for="task in project.tasks" :key="task">
                           ‣ {{ $t(task) }}
                         </div>
