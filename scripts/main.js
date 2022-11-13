@@ -110,6 +110,8 @@ const vueApp = createApp({
 const messages = {
   en: {
     present: 'Present',
+    language: 'Langue',
+    language: 'Language',
     header: {
       skills: 'Web & Mobile Developer',
       download: 'Download',
@@ -202,6 +204,7 @@ const messages = {
   },
   fr: {
     present: 'présente',
+    language: 'Langue',
     header: {
       skills: 'Développeur Web & Mobile',
       download: 'Télécharger',

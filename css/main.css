@@ -151,6 +151,15 @@ footer a:not(.nav-link) {
 	cursor: pointer;
 }
 
+.language-select {
+	flex: 1;
+	font-size: 16px;
+}
+.language-select select {
+	padding-top: 0;
+	padding-bottom: 0;
+} 
+
 @media (min-width: 48em) {
 	.site-title {
 		float: left;
@@ -161,6 +170,29 @@ footer a:not(.nav-link) {
 	.avatar {
 		margin-bottom: -80px;
 		margin-left: 0;
+	}
+}
+
+.container {
+	padding: 0 !important;
+}
+
+@media (max-width: 975px) {
+	.work-experience-section {
+		padding: 0 20px !important;
+	}
+	.card-body {
+		padding: 15px;
+	}
+	.timeline-card {
+		margin-left: 15px !important;
+	}
+	.timeline-card::before {
+		left: -23px;
+	}
+	.timeline-card::after {
+		left: -23px;
+		width: 22px;
 	}
 }
 
