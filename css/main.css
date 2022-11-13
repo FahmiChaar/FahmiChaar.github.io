@@ -158,6 +158,7 @@ footer a:not(.nav-link) {
 .language-select select {
 	padding-top: 0;
 	padding-bottom: 0;
+	box-shadow: none !important;
 } 
 
 @media (min-width: 48em) {
@@ -177,7 +178,14 @@ footer a:not(.nav-link) {
 	padding: 0 !important;
 }
 
-@media (max-width: 975px) {
+@media (width <= 975px) {
+	.language-container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.cover-bg {
+		border-radius: 0;
+	}
 	.work-experience-section {
 		padding: 0 20px !important;
 	}

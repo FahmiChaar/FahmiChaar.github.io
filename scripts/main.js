@@ -171,6 +171,7 @@ const messages = {
     },
     projects: {
       visit: "Web Site",
+      more: "and more...",
       bizzy: {
         description: "A calendar-based app that helps you find, create, and share exciting events"
       },
@@ -264,6 +265,7 @@ const messages = {
     },
     projects: {
       visit: "Site Web",
+      more: "et plus...",
       bizzy: {
         description: "Application basée sur un calendrier qui vous aide à trouver, créer et partager des événements passionnants",
       },

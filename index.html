@@ -34,11 +34,11 @@
   <div v-cloak>
     <header class="d-print-none">
       <div class="container text-center text-lg-left">
-        <div class="py-2 clearfix d-flex align-items-center justify-content-between">
+        <div class="language-container py-2 clearfix d-flex align-items-center justify-content-between">
           <h1 class="mb-0 d-flex align-items-center language-select">
             <!-- <div>Mohamed Fahmi CHAAR - CV</div> -->
             <div>{{ $t('language') }}</div>
-            <select title="languages" class="text-capitalize mx-2 form-select form-select-sm w-auto btn-outline-danger" v-model="$i18n.locale">
+            <select title="languages" class="text-capitalize mx-1 form-select form-select-sm w-auto btn-outline-danger" v-model="$i18n.locale">
               <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
                 {{ lang }}
               </option>
@@ -134,7 +134,7 @@
                 <div class="mb-2"><span>JavaScript</span>
                   <div class="progress my-1">
                     <div class="progress-bar bg-warning" role="progressbar" data-aos="zoom-in-right" data-aos-delay="300"
-                      data-aos-anchor=".skills-section" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                      data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
                 </div>
@@ -239,6 +239,7 @@
                       <div class="value" v-html="getTools(project.tools)"></div>
                     </div>
                   </div>
+                  <div class="text-danger">{{ $t('projects.more') }}</div>
                 </div>
               </div>
               <div class="timeline-card timeline-card-primary card shadow-sm">
@@ -270,6 +271,7 @@
                       <div class="value" v-html="getTools(project.tools)"></div>
                     </div>
                   </div>
+                  <div class="text-danger">{{ $t('projects.more') }}</div>
                 </div>
               </div>
             </div>
