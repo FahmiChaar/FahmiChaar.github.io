@@ -62,7 +62,7 @@ const vueApp = createApp({
           },
           {
             name: "SunnApp",
-            description: "projects.description",
+            description: "projects.sunnapp.description",
             tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
             tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
             links: {
