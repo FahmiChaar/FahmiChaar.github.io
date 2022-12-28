@@ -29,33 +29,6 @@ const vueApp = createApp({
           }
         },
         {
-          name: 'Haval.tn - Greatwall.tn - Foton.tn',
-          logo: 'haval.png',
-          tasks: ['projects.haval.description'],
-          tools: 'HTML, Css, Javascript, Git',
-          links: {
-            web: "https://haval.tn"
-          }
-        },
-        {
-          name: 'Zsexpress',
-          logo: 'zs.png',
-          description: 'projects.zs.description',
-          tasks: ['projects.zs.task1', 'projects.vpsTasks'],
-          tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
-          links: {
-            web: "http://zs-express-tn.com"
-          }
-        },
-        {
-          name: 'Hyundai CRM',
-          logo: 'hyundai.jpeg',
-          description: 'Hyundai TN CRM',
-          tasks: ['projects.hcrm.tasks'],
-          tools: 'PHP, Zurmo CRM, Yii Framework, Javascript, Highcharts, Git',
-          links: {}
-        },
-        {
           name: 'IDEO GROUPE',
           logo: 'ideo.png',
           description: 'projects.ideo.description',
@@ -65,6 +38,16 @@ const vueApp = createApp({
             android: "https://play.google.com/store/apps/details?id=com.ideo.app&hl=fr&gl=US"
           },
           pagebreak: true
+        },
+        {
+          name: 'Bizznass',
+          logo: 'bizznass.png',
+          description: 'projects.bizznass.description',
+          tasks: ['projects.mobDevTasks'],
+          tools: 'Ionic Framework, Capacitor, Laravel, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=com.bizznass.app&hl=fr&gl=US"
+          }
         },
         {
           name: 'Miqat',
@@ -116,6 +99,33 @@ const vueApp = createApp({
           links: {
             android: "https://apkpure.com/fr/any-service-%D8%A3%D9%8A-%D8%AE%D8%AF%D9%85%D8%A9/tn.converto.apps.anyService",
           }
+        },
+        {
+          name: 'Haval.tn - Greatwall.tn - Foton.tn',
+          logo: 'haval.png',
+          tasks: ['projects.haval.description'],
+          tools: 'HTML, Css, Javascript, Git',
+          links: {
+            web: "https://haval.tn"
+          }
+        },
+        {
+          name: 'Zsexpress',
+          logo: 'zs.png',
+          description: 'projects.zs.description',
+          tasks: ['projects.zs.task1', 'projects.vpsTasks'],
+          tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
+          links: {
+            web: "http://zs-express-tn.com"
+          }
+        },
+        {
+          name: 'Hyundai CRM',
+          logo: 'hyundai.jpeg',
+          description: 'Hyundai TN CRM',
+          tasks: ['projects.hcrm.tasks'],
+          tools: 'PHP, Zurmo CRM, Yii Framework, Javascript, Highcharts, Git',
+          links: {}
         },
         {
           name: "projects.hospital.name",
@@ -226,6 +236,9 @@ const messages = {
       bizzy: {
         description: "A calendar-based app that helps you find, create, and share exciting events"
       },
+      bizznass: {
+        description: "Bizznass connects SMEs and individuals to Alibaba and Amazon market places by providing complete solutions of purchasing."
+      },
       haval: {
         description: "Template integration"
       },
@@ -320,6 +333,9 @@ const messages = {
       more: "et plus...",
       bizzy: {
         description: "Application basée sur un calendrier qui vous aide à trouver, créer et partager des événements passionnants",
+      },
+      bizznass: {
+        description: "Bizznass connecte les PME et les particuliers aux places de marché Alibaba et Amazon en fournissant des solutions complètes d'achat",
       },
       haval: {
         description: "Intégration de templates"
