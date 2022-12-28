@@ -5,89 +5,140 @@ const vueApp = createApp({
     return {
       langs: ['en', 'fr'],
       age: new Date().getFullYear() - 1990,
-      projects: {
-        freelance: [
-          {
-            name: 'Bizzybird',
-            description: 'projects.bizzy.description',
-            tasks: ['projects.mobDevTasks'],
-            tools: 'Ionic Framework, Angular, Sass, Capacitor',
-            links: {
-              android: "https://play.google.com/store/apps/details?id=tn.simple.bizzybird&hl=fr&gl=US",
-              ios: "https://apps.apple.com/us/app/bizzybird/id1566802800?platform=iphone"
-            }
+      projects: [
+        {
+          name: 'Bizzybird',
+          logo: 'bizzy.png',
+          description: 'projects.bizzy.description',
+          tasks: ['projects.mobDevTasks'],
+          tools: 'Ionic Framework, Angular, Sass, Capacitor, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=tn.simple.bizzybird&hl=fr&gl=US",
+            ios: "https://apps.apple.com/us/app/bizzybird/id1566802800?platform=iphone"
+          }
+        },
+        {
+          name: "SunnApp",
+          logo: 'sunnapp.png',
+          description: "projects.sunnapp.description",
+          tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
+          tools: 'Laravel, Vue, Vuetify, Sass, Angular, Ionic, Capacitor, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=com.sunnapp&hl=fr&gl=US",
+            ios: "https://apps.apple.com/us/app/sunnapp-horaires-de-pri%C3%A8re/id1597447110?platform=iphone"
+          }
+        },
+        {
+          name: 'Haval.tn - Greatwall.tn - Foton.tn',
+          logo: 'haval.png',
+          tasks: ['projects.haval.description'],
+          tools: 'HTML, Css, Javascript, Git',
+          links: {
+            web: "https://haval.tn"
+          }
+        },
+        {
+          name: 'Zsexpress',
+          logo: 'zs.png',
+          description: 'projects.zs.description',
+          tasks: ['projects.zs.task1', 'projects.vpsTasks'],
+          tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
+          links: {
+            web: "http://zs-express-tn.com"
+          }
+        },
+        {
+          name: 'Hyundai CRM',
+          logo: 'hyundai.jpeg',
+          description: 'Hyundai TN CRM',
+          tasks: ['projects.hcrm.tasks'],
+          tools: 'PHP, Zurmo CRM, Yii Framework, Javascript, Highcharts, Git',
+          links: {}
+        },
+        {
+          name: 'IDEO GROUPE',
+          logo: 'ideo.png',
+          description: 'projects.ideo.description',
+          tasks: ['projects.mobDevTasks'],
+          tools: 'Ionic Framework, Capacitor, OneSignal, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=com.ideo.app&hl=fr&gl=US"
           },
-          {
-            name: 'Haval.tn - Greatwall.tn - Foton.tn',
-            tasks: ['projects.haval.description'],
-            tools: 'HTML, Css, Javascript',
-            links: {
-              web: "https://haval.tn"
-            }
+          pagebreak: true
+        },
+        {
+          name: 'Miqat',
+          logo: 'miqat.png',
+          description: 'projects.miqat.description',
+          tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
+          tools: 'Laravel, Vue, Vuetify, Sass, Angular, Ionic, Capacitor, Node JS, Socket.io, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=tn.converto.miqat&hl=fr&gl=US"
+          }
+        },
+        {
+          name: "Children's Boulevard",
+          logo: 'cb.png',
+          tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
+          tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=tn.converto.cb&hl=fr&gl=US"
+          }
+        },
+        {
+          name: "Islam Pro",
+          logo: 'islam.png',
+          description: "projects.sunnapp.description",
+          tasks: ['projects.mobDevTasks', 'projects.storesDeploy'],
+          tools: 'Ionic Framework, Capacitor, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=com.islam.pro&hl=fr&gl=US",
+            ios: "https://apps.apple.com/us/app/islam-pro-l-quran-athan-salat/id6444192785?platform=iphone"
           },
-          {
-            name: 'Zsexpress',
-            description: 'projects.zs.description',
-            tasks: ['projects.zs.task1', 'projects.vpsTasks'],
-            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
-            links: {
-              web: "http://zs-express-tn.com"
-            }
+        },
+        {
+          name: "Editions Akhira",
+          logo: 'edition.png',
+          tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
+          tools: 'Laravel, Inersia js, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
+          links: {
+            android: "https://play.google.com/store/apps/details?id=com.edition.akhira&hl=fr&gl=US",
+            ios: "https://apps.apple.com/fr/app/editions-akhira/id1593373530?platform=iphone"
           },
-          {
-            name: 'Foodex',
-            description: 'projects.foodex.description',
-            tasks: ['projects.mobDevTasks'],
-            tools: 'React Native',
-            links: {}
-          },
-        ],
-        converto: [
-          {
-            name: 'Miqat',
-            description: 'projects.miqat.description',
-            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
-            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
-            links: {
-              android: "https://play.google.com/store/apps/details?id=tn.converto.miqat&hl=fr&gl=US"
-            }
-          },
-          {
-            name: "Children's Boulevard",
-            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
-            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
-            links: {
-              android: "https://play.google.com/store/apps/details?id=tn.converto.cb&hl=fr&gl=US"
-            }
-          },
-          {
-            name: "SunnApp",
-            description: "projects.sunnapp.description",
-            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
-            tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
-            links: {
-              android: "https://play.google.com/store/apps/details?id=com.sunnapp&hl=fr&gl=US",
-              ios: "https://apps.apple.com/us/app/sunnapp-horaires-de-pri%C3%A8re/id1597447110?platform=iphone"
-            }
-          },
-          {
-            name: "Editions Akhira",
-            tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
-            tools: 'Laravel, Inersia js, Vue, Vuetify, Sass, Ionic Framework, Capacitor',
-            links: {
-              android: "https://play.google.com/store/apps/details?id=com.edition.akhira&hl=fr&gl=US",
-              ios: "https://apps.apple.com/fr/app/editions-akhira/id1593373530?platform=iphone"
-            }
-          },
-          {
-            name: "projects.hospital.name",
-            description: "projects.hospital.description",
-            tasks: ['projects.frontDev', 'projects.backDev', 'projects.vpsTasks'],
-            tools: 'Laravel, Vue, Vuetify, Sass',
-            links: {}
-          },
-        ]
-      }
+          pagebreak: true
+        },
+        {
+          name: "Any Service",
+          logo: 'any.png',
+          description: "projects.anyService.description",
+          tasks: ['projects.mobDevTasks', 'projects.androidDeploy'],
+          tools: 'Ionic Framework, Capacitor, Node JS, Socket.io, Git',
+          links: {
+            android: "https://apkpure.com/fr/any-service-%D8%A3%D9%8A-%D8%AE%D8%AF%D9%85%D8%A9/tn.converto.apps.anyService",
+          }
+        },
+        {
+          name: "projects.hospital.name",
+          description: "projects.hospital.description",
+          tasks: ['projects.frontDev', 'projects.backDev', 'projects.vpsTasks'],
+          tools: 'Laravel, Vue, Vuetify, Sass, Git',
+          links: {}
+        },
+        {
+          name: 'Foodex',
+          description: 'projects.foodex.description',
+          tasks: ['projects.mobDevTasks'],
+          tools: 'React Native, Twilio, Git',
+          links: {}
+        },
+        {
+          name: 'SEVEN',
+          description: 'Workout program application',
+          tasks: ['projects.mobDevTasks'],
+          tools: 'React Native, Git',
+          links: {}
+        }
+      ]
     }
   },
   mounted() {
@@ -119,7 +170,7 @@ const messages = {
     },
     about: {
       title: 'About Me',
-      content: "Hello! I’m Mohamed Fahmi Chaar. I am passionate about Web & Mobile Development. I am a skilled Full Stack Developer.",
+      content: `8 years of experience in web and mobile development.\nI'm passionate about creating engaging, user-friendly software by building both web and mobile applications.`,
       age: 'Age',
       email: 'Email',
       phone: 'Phone',
@@ -129,7 +180,7 @@ const messages = {
       title: 'Professional Skills'
     },
     work: {
-      title: 'Work Experience',
+      title: 'My Projects',
       projects: "Projects",
       tasks: "Tasks",
       tools: "Tools",
@@ -213,7 +264,8 @@ const messages = {
     },
     about: {
       title: 'À propos de moi',
-      content: "Bonjour! Je suis Mohamed Fahmi Chaar. Je suis passionné par le développement Web & Mobile. Je suis un développeur Full Stack.",
+      content: `8 ans d'expérience en développement web et mobile.\n
+      Je suis passionné par la création de logiciels attrayants et conviviaux en créant des applications Web et mobiles.`,
       age: 'Age',
       email: 'Email',
       phone: 'Téléphone',
@@ -223,7 +275,7 @@ const messages = {
       title: 'compétences professionnelles'
     },
     work: {
-      title: "L'expérience professionnelle",
+      title: "Mes Projets",
       projects: "Projets",
       tasks: "Tâches",
       tools: "Outils",

@@ -20,6 +20,7 @@
   <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
   <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
   <link href="css/main.css?ver=1.2.0" rel="stylesheet">
+  <link href="css/portfolio.css" rel="stylesheet">
   <noscript>
     <style type="text/css">
       [data-aos] {
@@ -68,10 +69,10 @@
                 <h2 class="h1 mt-2" data-aos="fade-down" data-aos-delay="0">Mohamed Fahmi CHAAR</h2>
                 <p data-aos="fade-down" data-aos-delay="100">{{ $t('header.skills') }}</p>
                 <div class="d-print-none" data-aos="fade-down" data-aos-delay="200">
-                  <!-- <a
-                    class="btn btn-light text-dark shadow-sm mt-1 me-1" href="right-resume.pdf" target="_blank">{{ $t('header.download') }}
+                  <a
+                    class="btn btn-light text-dark shadow-sm mt-1 me-1" href="Mohamed Fahmi CHAAR - Web & Mobile.pdf" target="_blank">{{ $t('header.download') }}
                     CV
-                  </a> -->
+                  </a>
                   <a class="btn btn-success shadow-sm mt-1" href="#contact">{{ $t('header.hireMe') }}</a></div>
               </div>
             </div>
@@ -209,97 +210,31 @@
           <hr class="d-print-none" />
           <div class="work-experience-section px-3 px-lg-4">
             <h2 class="h3 mb-4">{{ $t('work.title') }}</h2>
-            <div class="timeline">
-              <div class="timeline-card timeline-card-primary card shadow-sm">
-                <div class="card-body">
-                  <div class="h5 mb-1">{{ $t('work.converto.title') }} <span class="text-muted h6">{{ $t('work.converto.company') }}</span></div>
-                  <div class="text-muted text-small mb-2">2015 - {{ $t('present') }}</div>
-                  <!-- <div>{{ $t('work.converto.content') }}</div> -->
-                  <h5 class="my-1">{{ $t('work.projects') }}</h5>
-                  <div class="mb-3" v-for="(project, index) in projects.converto" :key="'converto-'+index">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
-                      <div>
-                        <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android" :href="project.links.android" target="_blank">Play Store</a>
-                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios" target="_blank">App Store</a>
-                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web" target="_blank">{{ $t('projects.visit') }}</a>
-                      </div>
-                    </div>
-                    <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
-                    <div class="info d-flex align-items-start gap-1">
-                      <div class="label text-muted">{{ $t('work.tasks') }}:</div>
-                      <div class="mb-1">
-                        <div class="value" v-for="task in project.tasks" :key="task">
-                          ‣ {{ $t(task) }}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info d-flex align-items-center gap-1">
-                      <div class="label text-muted">{{ $t('work.tools') }}:</div>
-                      <div class="value" v-html="getTools(project.tools)"></div>
+            <div class="row">
+              <div class="col-sm-6" v-for="(project, index) in projects" :key="'projects-'+index">
+                <div class="mb-3 card shadow-sm p-3 rounded-4">
+                  <div v-if="project.logo" class="text-center mb-2">
+                    <img class="w-50" :src="'images/projects/'+project.logo">
+                    <div class="mt-2"> 
+                      <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android" :href="project.links.android" target="_blank">Play Store</a>
+                      <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios" target="_blank">App Store</a>
+                      <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web" target="_blank">{{ $t('projects.visit') }}</a>
                     </div>
                   </div>
-                  <div class="text-danger">{{ $t('projects.more') }}</div>
-                </div>
-              </div>
-              <div class="timeline-card timeline-card-primary card shadow-sm">
-                <div class="card-body">
-                  <div class="h5 mb-1">Freelancer</div>
-                  <div class="text-muted text-small mb-2">2012 - 2015</div>
-                  <!-- <div>{{ $t('work.freelance.content') }}</div> -->
-                  <h5 class="my-1">{{ $t('work.projects') }}</h5>
-                  <div class="mb-3" v-for="(project, index) in projects.freelance" :key="'freelance-'+index">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
-                      <div>
-                        <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android" :href="project.links.android" target="_blank">Play Store</a>
-                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios" target="_blank">App Store</a>
-                        <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web" target="_blank">{{ $t('projects.visit') }}</a>
+                  <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
+                  <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
+                  <!-- <div class="info d-flex align-items-start gap-1">
+                    <div class="label text-muted">{{ $t('work.tasks') }}:</div>
+                    <div class="mb-1">
+                      <div class="value" v-for="task in project.tasks" :key="task">
+                        ‣ {{ $t(task) }}
                       </div>
                     </div>
-                    <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
-                    <div class="info d-flex align-items-start gap-1">
-                      <div class="label text-muted">{{ $t('work.tasks') }}:</div>
-                      <div class="mb-1">
-                        <div class="value" v-for="task in project.tasks" :key="task">
-                          ‣ {{ $t(task) }}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info d-flex align-items-center gap-1">
-                      <div class="label text-muted">{{ $t('work.tools') }}:</div>
-                      <div class="value" v-html="getTools(project.tools)"></div>
-                    </div>
+                  </div> -->
+                  <div class="info d-flex align-items-center gap-1">
+                    <div class="label text-muted">{{ $t('work.tools') }}:</div>
+                    <div class="value" v-html="getTools(project.tools)"></div>
                   </div>
-                  <div class="text-danger">{{ $t('projects.more') }}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="d-print-none" />
-          <div class="page-break"></div>
-          <div class="education-section px-3 px-lg-4">
-            <h2 class="h3 mb-4">{{ $t('education.title') }}</h2>
-            <div class="timeline">
-              <div class="timeline-card timeline-card-success card shadow-sm">
-                <div class="card-body">
-                  <div class="h5 mb-1">{{ $t('education.self.title') }}</div>
-                  <div class="text-muted text-small">2011 - {{ $t('present') }}</div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="timeline-card timeline-card-success card shadow-sm">
-                <div class="card-body">
-                  <div class="h5 mb-1">{{ $t('education.bac.title') }} <span class="text-muted h6">{{ $t('education.bac.subtitle') }}</span></div>
-                  <div class="text-muted text-small">2007 - 2011</div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="timeline-card timeline-card-success card shadow-sm">
-                <div class="card-body">
-                  <div class="h5 mb-1">{{ $t('education.secondary.title') }} <span class="text-muted h6">{{ $t('education.secondary.subtitle') }}</span></div>
-                  <div class="text-muted text-small">2002 - 2007</div>
-                  <div></div>
                 </div>
               </div>
             </div>
