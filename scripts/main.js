@@ -180,6 +180,7 @@ const messages = {
     },
     about: {
       title: 'About Me',
+      smallContent: "I am a Senior Full Stack Developer passionate about Web & Mobile Development.",
       content: `8 years of experience in web and mobile development.\nI'm passionate about creating engaging, user-friendly software by building both web and mobile applications.`,
       age: 'Age',
       email: 'Email',
@@ -277,6 +278,7 @@ const messages = {
     },
     about: {
       title: 'À propos de moi',
+      smallContent: "Je suis un Développeur Full Stack Senior passionné par le Développement Web & Mobile.",
       content: `8 ans d'expérience en développement web et mobile.\n
       Je suis passionné par la création de logiciels attrayants et conviviaux en créant des applications Web et mobiles.`,
       age: 'Age',
