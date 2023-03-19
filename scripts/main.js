@@ -9,6 +9,7 @@ const vueApp = createApp({
         {
           name: 'Bizzybird',
           logo: 'bizzy.png',
+          app: 'bizzy-app.png',
           description: 'projects.bizzy.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'Ionic Framework, Angular, Sass, Capacitor, Git',
@@ -20,6 +21,7 @@ const vueApp = createApp({
         {
           name: "SunnApp",
           logo: 'sunnapp.png',
+          app: 'sunnapp-app.png',
           description: "projects.sunnapp.description",
           tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
           tools: 'Laravel, Vue, Vuetify, Sass, Angular, Ionic, Capacitor, Git',
@@ -31,6 +33,7 @@ const vueApp = createApp({
         {
           name: 'IDEO GROUPE',
           logo: 'ideo.png',
+          app: 'ideo-app.png',
           description: 'projects.ideo.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'Ionic Framework, Capacitor, OneSignal, Git',
@@ -42,6 +45,7 @@ const vueApp = createApp({
         {
           name: 'Bizznass',
           logo: 'bizznass.png',
+          app: 'bizznass-app.png',
           description: 'projects.bizznass.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'Ionic Framework, Capacitor, Laravel, Git',
@@ -52,6 +56,7 @@ const vueApp = createApp({
         {
           name: 'Miqat',
           logo: 'miqat.png',
+          app: 'miqat-app.png',
           description: 'projects.miqat.description',
           tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
           tools: 'Laravel, Vue, Vuetify, Sass, Angular, Ionic, Capacitor, Node JS, Socket.io, Git',
@@ -62,6 +67,7 @@ const vueApp = createApp({
         {
           name: "Children's Boulevard",
           logo: 'cb.png',
+          app: 'cb-app.png',
           tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
           tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
           links: {
@@ -71,6 +77,7 @@ const vueApp = createApp({
         {
           name: "Islam Pro",
           logo: 'islam.png',
+          app: 'islam-app.png',
           description: "projects.sunnapp.description",
           tasks: ['projects.mobDevTasks', 'projects.storesDeploy'],
           tools: 'Ionic Framework, Capacitor, Git',
@@ -82,6 +89,7 @@ const vueApp = createApp({
         {
           name: "Editions Akhira",
           logo: 'edition.png',
+          app: 'edition-app.png',
           tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
           tools: 'Laravel, Inersia js, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
           links: {
@@ -93,6 +101,7 @@ const vueApp = createApp({
         {
           name: "Any Service",
           logo: 'any.png',
+          app: 'any-app.png',
           description: "projects.anyService.description",
           tasks: ['projects.mobDevTasks', 'projects.androidDeploy'],
           tools: 'Ionic Framework, Capacitor, Node JS, Socket.io, Git',
@@ -101,8 +110,18 @@ const vueApp = createApp({
           }
         },
         {
+          name: 'SIB',
+          logo: 'sib.svg',
+          app: 'sib-app.png',
+          tasks: 'projects.sib.description',
+          tasks: ['projects.sib.tasks'],
+          tools: 'HTML, Scss, Javascript, Alpine js, Vite, Git',
+          links: {}
+        },
+        {
           name: 'Haval.tn - Greatwall.tn - Foton.tn',
           logo: 'haval.png',
+          app: 'haval-app.png',
           tasks: ['projects.haval.description'],
           tools: 'HTML, Css, Javascript, Git',
           links: {
@@ -112,6 +131,7 @@ const vueApp = createApp({
         {
           name: 'Zsexpress',
           logo: 'zs.png',
+          app: 'zs-app.png',
           description: 'projects.zs.description',
           tasks: ['projects.zs.task1', 'projects.vpsTasks'],
           tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
@@ -122,6 +142,7 @@ const vueApp = createApp({
         {
           name: 'Hyundai CRM',
           logo: 'hyundai.jpeg',
+          app: 'hyundai-app.png',
           description: 'Hyundai TN CRM',
           tasks: ['projects.hcrm.tasks'],
           tools: 'PHP, Zurmo CRM, Yii Framework, Javascript, Highcharts, Git',
@@ -129,6 +150,7 @@ const vueApp = createApp({
         },
         {
           name: "projects.hospital.name",
+          app: 'hospital-app.png',
           description: "projects.hospital.description",
           tasks: ['projects.frontDev', 'projects.backDev', 'projects.vpsTasks'],
           tools: 'Laravel, Vue, Vuetify, Sass, Git',
@@ -136,17 +158,38 @@ const vueApp = createApp({
         },
         {
           name: 'Foodex',
+          app: 'foodex-app.png',
           description: 'projects.foodex.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'React Native, Twilio, Git',
           links: {}
         },
         {
-          name: 'SEVEN',
-          description: 'Workout program application',
+          name: 'Lost & Found',
+          app: 'lost-app.png',
+          description: '',
           tasks: ['projects.mobDevTasks'],
-          tools: 'React Native, Git',
+          tools: 'Ionic, Angular, Cordova',
           links: {}
+        },
+        {
+          name: 'EverShipp',
+          app: 'everShipp-app.png',
+          description: '',
+          tasks: ['projects.mobDevTasks'],
+          tools: 'Ionic v1, Angular js, Cordova',
+          links: {}
+        },
+        {
+          name: 'Phytologis',
+          logo: 'phytologis.png',
+          app: 'phytologis-app.png',
+          description: 'Index des produits phytosanitaires.\nApplication destinée aux professionnels de la santé des végétaux',
+          tasks: ['projects.mobDevTasks'],
+          tools: 'HTML, CSS, Javascript, Cordova',
+          links: {
+            android: 'https://apkpure.com/fr/phytologis/tn.converto.phytologis'
+          }
         }
       ]
     }

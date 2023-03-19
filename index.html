@@ -68,22 +68,17 @@
         <img class="top-section-image w-100" src="/images/hero-devices.svg" alt="hero-devices">
       </div>
     </section>
-    <div class="container">
-      <section class="projects">
-        <h3 class="section-title">{{ $t('work.title') }}</h3>
-        <div class="row">
-          <div class="col-sm-6" v-for="(project, index) in projects" :key="'projects-'+index">
-            <div class="mb-3 card shadow-sm p-3 rounded-4">
-              <div v-if="project.logo" class="text-center mb-2">
+    <section class="projects container">
+      <h3 class="section-title mb-5">{{ $t('work.title') }}</h3>
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-center" v-for="(project, index) in projects" :key="'projects-'+index">
+          <div class="project-card">
+            <div class="device-frame-container">
+              <img :src="'images/projects/'+project.app">
+            </div>
+            <div class="project-details">
+              <div v-if="project.logo" class="project-logo mb-2">
                 <img class="w-50 rounded-3" :src="'images/projects/'+project.logo">
-                <div class="mt-2">
-                  <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android"
-                    :href="project.links.android" target="_blank">Play Store</a>
-                  <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios"
-                    target="_blank">App Store</a>
-                  <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web"
-                    target="_blank">{{ $t('projects.visit') }}</a>
-                </div>
               </div>
               <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
               <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
@@ -91,11 +86,19 @@
                 <div class="label text-muted">{{ $t('work.tools') }}:</div>
                 <div class="value" v-html="getTools(project.tools)"></div>
               </div>
+              <div class="mt-2">
+                <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android"
+                  :href="project.links.android" target="_blank">Play Store</a>
+                <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.ios" :href="project.links.ios"
+                  target="_blank">App Store</a>
+                <a class="btn btn-outline-primary btn-sm py-0" v-if="project.links.web" :href="project.links.web"
+                  target="_blank">{{ $t('projects.visit') }}</a>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
     <footer class="pt-4 pb-4 text-muted text-center d-print-none">
       <div class="container">
         <div class="my-3">
