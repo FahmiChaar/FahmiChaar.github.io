@@ -71,19 +71,20 @@
     <section class="projects container">
       <h3 class="section-title mb-5">{{ $t('work.title') }}</h3>
       <div class="row">
-        <div class="col-md-6 d-flex align-items-center" v-for="(project, index) in projects" :key="'projects-'+index">
+        <div class="project-col col-md-6 d-flex align-items-center" v-for="(project, index) in projects" :key="'projects-'+index">
           <div class="project-card">
+            <!-- <div v-if="project.logo" class="project-logo mb-2">
+              <img class="w-50 rounded-3" :src="'images/projects/'+project.logo">
+            </div> -->
             <div class="device-frame-container">
               <img :src="'images/projects/'+project.app">
+              <div class="circle" :style="{'background': }"></div>
             </div>
             <div class="project-details">
-              <div v-if="project.logo" class="project-logo mb-2">
-                <img class="w-50 rounded-3" :src="'images/projects/'+project.logo">
-              </div>
               <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
               <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
               <div class="info d-flex align-items-center gap-1">
-                <div class="label text-muted">{{ $t('work.tools') }}:</div>
+                <!-- <div class="label text-muted">{{ $t('work.tools') }}:</div> -->
                 <div class="value" v-html="getTools(project.tools)"></div>
               </div>
               <div class="mt-2">

@@ -10,6 +10,7 @@ const vueApp = createApp({
           name: 'Bizzybird',
           logo: 'bizzy.png',
           app: 'bizzy-app.png',
+          
           description: 'projects.bizzy.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'Ionic Framework, Angular, Sass, Capacitor, Git',
