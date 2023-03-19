@@ -47,6 +47,7 @@ const vueApp = createApp({
           name: 'Bizznass',
           logo: 'bizznass.png',
           app: 'bizznass-app.png',
+          color: 'orange',
           description: 'projects.bizznass.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'Ionic Framework, Capacitor, Laravel, Git',
@@ -58,6 +59,7 @@ const vueApp = createApp({
           name: 'Miqat',
           logo: 'miqat.png',
           app: 'miqat-app.png',
+          color: 'green',
           description: 'projects.miqat.description',
           tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
           tools: 'Laravel, Vue, Vuetify, Sass, Angular, Ionic, Capacitor, Node JS, Socket.io, Git',
@@ -69,6 +71,7 @@ const vueApp = createApp({
           name: "Children's Boulevard",
           logo: 'cb.png',
           app: 'cb-app.png',
+          color: 'pink',
           tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.androidDeploy'],
           tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
           links: {
@@ -76,7 +79,7 @@ const vueApp = createApp({
           }
         },
         {
-          name: "Islam Pro",
+          name: "Islam",
           logo: 'islam.png',
           app: 'islam-app.png',
           description: "projects.sunnapp.description",
@@ -91,6 +94,7 @@ const vueApp = createApp({
           name: "Editions Akhira",
           logo: 'edition.png',
           app: 'edition-app.png',
+          color: '#406deb',
           tasks: ['projects.mobDevTasks', 'projects.backDev', 'projects.vpsTasks', 'projects.storesDeploy'],
           tools: 'Laravel, Inersia js, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
           links: {
@@ -103,7 +107,8 @@ const vueApp = createApp({
           name: "Any Service",
           logo: 'any.png',
           app: 'any-app.png',
-          description: "projects.anyService.description",
+          color: '#582e6e',
+          description: "projects.anyServices.description",
           tasks: ['projects.mobDevTasks', 'projects.androidDeploy'],
           tools: 'Ionic Framework, Capacitor, Node JS, Socket.io, Git',
           links: {
@@ -114,7 +119,8 @@ const vueApp = createApp({
           name: 'SIB',
           logo: 'sib.svg',
           app: 'sib-app.png',
-          tasks: 'projects.sib.description',
+          color: 'green',
+          description: 'projects.sib.description',
           tasks: ['projects.sib.tasks'],
           tools: 'HTML, Scss, Javascript, Alpine js, Vite, Git',
           links: {}
@@ -123,6 +129,7 @@ const vueApp = createApp({
           name: 'Haval.tn - Greatwall.tn - Foton.tn',
           logo: 'haval.png',
           app: 'haval-app.png',
+          color: 'red',
           tasks: ['projects.haval.description'],
           tools: 'HTML, Css, Javascript, Git',
           links: {
@@ -133,6 +140,7 @@ const vueApp = createApp({
           name: 'Zsexpress',
           logo: 'zs.png',
           app: 'zs-app.png',
+          color: 'purple',
           description: 'projects.zs.description',
           tasks: ['projects.zs.task1', 'projects.vpsTasks'],
           tools: 'Laravel, Vue, Vuetify, Sass, Ionic Framework, Capacitor, Git',
@@ -144,6 +152,7 @@ const vueApp = createApp({
           name: 'Hyundai CRM',
           logo: 'hyundai.jpeg',
           app: 'hyundai-app.png',
+          color: 'lightGray',
           description: 'Hyundai TN CRM',
           tasks: ['projects.hcrm.tasks'],
           tools: 'PHP, Zurmo CRM, Yii Framework, Javascript, Highcharts, Git',
@@ -154,12 +163,13 @@ const vueApp = createApp({
           app: 'hospital-app.png',
           description: "projects.hospital.description",
           tasks: ['projects.frontDev', 'projects.backDev', 'projects.vpsTasks'],
-          tools: 'Laravel, Vue, Vuetify, Sass, Git',
+          tools: 'Laravel, Vue, Sass, Git',
           links: {}
         },
         {
           name: 'Foodex',
           app: 'foodex-app.png',
+          color: 'red',
           description: 'projects.foodex.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'React Native, Twilio, Git',
@@ -185,6 +195,7 @@ const vueApp = createApp({
           name: 'Phytologis',
           logo: 'phytologis.png',
           app: 'phytologis-app.png',
+          color: 'green',
           description: 'Index des produits phytosanitaires.\nApplication destinée aux professionnels de la santé des végétaux',
           tasks: ['projects.mobDevTasks'],
           tools: 'HTML, CSS, Javascript, Cordova',
@@ -197,17 +208,17 @@ const vueApp = createApp({
   },
   mounted() {
     // Animations
-    AOS.init({
-      anchorPlacement: 'top-left',
-      duration: 1000
-    });
+    // AOS.init({
+    //   anchorPlacement: 'top-left',
+    //   duration: 1000
+    // });
   },
   methods: {
     switchLanguage(lang) {
       this.$i18n.locale = lang
     },
     getTools(tools) {
-      return tools.split(',').map(t => `<div class='badge bg-primary me-1' style='font-weight: normal;'>${t}</div>`).join('')
+      return tools.split(',').map(t => `<div class='badge py-1 mb-1 me-1' style='font-weight: normal;'>${t}</div>`).join('')
     }
   }
 })
@@ -303,6 +314,15 @@ const messages = {
       hospital: {
         name: 'Course management system',
         description: 'Course management system (creation, schedule, reservation)'
+      },
+      anyServices: {
+        description: "Any Services application allows you to find all services in various fields and communicate with their owners."
+      },
+      sib: {
+        description: "The Biodiversity Information System"
+      },
+      ideo: {
+        description: "The IDEO GROUPE application is intended for use by IDEO agents."
       },
       vpsTasks: "vps configuration and Backend deployment",
       mobDevTasks: "Develop android and ios mobile application",
@@ -402,6 +422,15 @@ const messages = {
       hospital: {
         name: 'Système de gestion des cours',
         description: 'Système de gestion des cours (création, planning, réservation)'
+      },
+      anyServices: {
+        description: "L'application Any Services vous permet de trouver tous les services dans divers domaines et de communiquer avec leurs propriétaires."
+      },
+      sib: {
+        description: "Le Système D'information Sur La Biodiversité"
+      },
+      ideo: {
+        description: "L'application IDEO GROUPE est destinée a l'usage des agents IDEO."
       },
       vpsTasks: "Configuration du vps et deployment du Backend",
       mobDevTasks: "Développer une application mobile android et ios",

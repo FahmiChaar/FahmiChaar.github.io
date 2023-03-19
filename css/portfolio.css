@@ -1,7 +1,0 @@
-.card {
-	transition: all 0.2s ease-in-out;
-}
-.card:hover {
-	transform: translate3d(0, -10px, 0);
-    border-color: #4a89dc;
-}

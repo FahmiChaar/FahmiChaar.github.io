@@ -6,29 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohamed Fahmi CHAAR</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
-    media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
-  </noscript>
-  <link href="css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-  <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-  <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
-  <link href="css/main.css?ver=1.2.0" rel="stylesheet">
-  <link href="css/portfolio.css" rel="stylesheet">
-  <noscript>
-    <style type="text/css">
-      [data-aos] {
-        opacity: 1 !important;
-        transform: translate(0) scale(1) !important;
-      }
-    </style>
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" />
+  <link href="css/font-awesome/css/all.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body id="top">
@@ -54,39 +35,37 @@
                 <li class="nav-item"><a target="_blank" class="nav-link" href="https://github.com/fahmichaar"
                     title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
                 </li>
+                <li class="nav-item"><a target="_blank" class="nav-link" href="https://www.linkedin.com/in/mohamed-fahmi-chaar-6804a6133/"
+                    title="Linkedin"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">Linkedin</span></a>
+                </li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </header>
-    <section class="top-section text-left py-4">
+    <section class="about-section text-left py-4">
       <div class="container">
         <h1>Mohamed Fahmi Chaar</h1>
         <h4>{{ $t('header.skills') }}</h4>
         <div class="text-samll mb-4">{{ $t('about.content') }}</div>
-        <img class="top-section-image w-100" src="/images/hero-devices.svg" alt="hero-devices">
+        <img class="about-section-image w-100" src="/images/hero-devices.svg" alt="hero-devices">
       </div>
     </section>
-    <section class="projects container">
-      <h3 class="section-title mb-5">{{ $t('work.title') }}</h3>
+    <section class="projects mt-4 container">
+      <h1 class="section-title mb-3 text-center">{{ $t('work.title') }}</h1>
       <div class="row">
-        <div class="project-col col-md-6 d-flex align-items-center" v-for="(project, index) in projects" :key="'projects-'+index">
-          <div class="project-card">
-            <!-- <div v-if="project.logo" class="project-logo mb-2">
-              <img class="w-50 rounded-3" :src="'images/projects/'+project.logo">
-            </div> -->
-            <div class="device-frame-container">
-              <img :src="'images/projects/'+project.app">
-              <div class="circle" :style="{'background': }"></div>
+        <div class="project-col col-md-6" v-for="(project, index) in projects" :key="'projects-'+index">
+          <div class="project-card row" :class="{'has-logo': project.logo}">
+            <div class="device-frame-container col-sm-3">
+              <img v-if="project.logo" class="project-logo rounded-3" :src="'images/projects/'+project.logo">
+              <img class="app-image" :src="'images/projects/'+project.app">
+              <div class="circle" :style="{'background': project.color}"></div>
             </div>
-            <div class="project-details">
-              <h6 class="text-danger m-0">{{ $t(project.name) }}</h6>
+            <div class="project-details col-sm-6">
+              <h4 class="text-primary m-0">{{ $t(project.name) }}</h4>
               <div class="text-small text-muted" v-if="project.description">{{ $t(project.description) }}</div>
-              <div class="info d-flex align-items-center gap-1">
-                <!-- <div class="label text-muted">{{ $t('work.tools') }}:</div> -->
-                <div class="value" v-html="getTools(project.tools)"></div>
-              </div>
+              <div class="mt-2" v-html="getTools(project.tools)"></div>
               <div class="mt-2">
                 <a class="me-1 btn btn-outline-primary btn-sm py-0" v-if="project.links.android"
                   :href="project.links.android" target="_blank">Play Store</a>
@@ -100,35 +79,31 @@
         </div>
       </div>
     </section>
-    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+    <footer class="text-muted text-center py-3">
       <div class="container">
-        <div class="my-3">
-          <div class="h4">Mohamed Fahmi CHAAR</div>
-          <div class="footer-nav">
-            <nav role="navigation">
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/fahmichaar" title="Twitter"><i
-                      class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/FahmiChaar" title="Github"><i
-                      class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="text-small">
-          <!-- <div class="mb-1">Moahamed Fahmi Chaar &copy; {{ $t('contact.copyright') }}</div> -->
-          <!-- <div>Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div> -->
+        <div class="h4">Mohamed Fahmi CHAAR</div>
+        <div class="footer-nav">
+          <nav role="navigation">
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a class="nav-link" href="https://twitter.com/fahmichaar" title="Twitter"><i
+                    class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="https://github.com/FahmiChaar" title="Github"><i
+                    class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/mohamed-fahmi-chaar-6804a6133/" title="Linkedin"><i
+                    class="fab fa-linkedin"></i><span class="menu-title sr-only">Linkedin</span></a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="https://unpkg.com/vue-i18n@9"></script>
-  <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-  <script src="scripts/aos.js?ver=1.2.0"></script>
-  <script src="scripts/main.js?ver=1.2.0"></script>
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 
