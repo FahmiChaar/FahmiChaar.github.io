@@ -78,8 +78,9 @@ footer a:not(.nav-link) {
 
 /* Projects */
 .project-card {
+	position: relative;
 	height: 250px;
-	background: yellow;
+	/* background: yellow; */
 	margin-bottom: 100px;
 	display: flex;
     align-items: center;
@@ -87,6 +88,20 @@ footer a:not(.nav-link) {
 	padding: 10px;
 	gap: 30px;
 }
+.project-logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.project-logo img{
+	/* transform: translateY(-50%); */
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	opacity: 0.2;
+	filter: blur(5px);
+}
+
 .device-frame-container {
 	position: relative;
 	/* text-align: right; */
@@ -96,8 +111,7 @@ footer a:not(.nav-link) {
 	z-index: 2;
 	width: 200px;
 }
-.device-frame-container::after {
-	content: '';
+.device-frame-container .circle {
 	position: absolute;
 	z-index: 1;
 	top: 50%;
@@ -105,6 +119,10 @@ footer a:not(.nav-link) {
 	width: 200px;
 	height: 200px;
 	transform: translate(-50%, -50%);
-	background: yellow;
+	background: #0084ff;
 	border-radius: 50%;
+}
+
+.project-col:nth-child(even) .project-card {
+	flex-direction: row-reverse;
 }
