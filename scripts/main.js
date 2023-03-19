@@ -160,6 +160,7 @@ const vueApp = createApp({
         },
         {
           name: "projects.hospital.name",
+          logo: 'hospital.png',
           app: 'hospital-app.png',
           description: "projects.hospital.description",
           tasks: ['projects.frontDev', 'projects.backDev', 'projects.vpsTasks'],
