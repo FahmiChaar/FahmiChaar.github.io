@@ -179,7 +179,7 @@ const vueApp = createApp({
         {
           name: 'Lost & Found',
           app: 'lost-app.png',
-          description: '',
+          description: 'projects.lost.description',
           tasks: ['projects.mobDevTasks'],
           tools: 'Ionic, Angular, Cordova',
           links: {}
@@ -204,7 +204,8 @@ const vueApp = createApp({
             android: 'https://apkpure.com/fr/phytologis/tn.converto.phytologis'
           }
         }
-      ]
+      ],
+      skills: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Angular', 'Ionic Framework', 'Vue', 'React', 'Vuetify', 'TailwindCss', 'Git', 'Laravel' ]
     }
   },
   mounted() {
@@ -237,7 +238,7 @@ const messages = {
     about: {
       title: 'About Me',
       smallContent: "I am a Senior Full Stack Developer passionate about Web & Mobile Development.",
-      content: `8 years of experience in web and mobile development.\nI'm passionate about creating engaging, user-friendly software by building both web and mobile applications.`,
+      content: `8 years of experience in web and mobile development.\nI am passionate about creating attractive and user-friendly software by developing web and mobile applications.`,
       age: 'Age',
       email: 'Email',
       phone: 'Phone',
@@ -324,6 +325,9 @@ const messages = {
       },
       ideo: {
         description: "The IDEO GROUPE application is intended for use by IDEO agents."
+      },
+      lost: {
+        description: "The application allows you to add posts for the things you lost or the things you found to deliver them to their owners"
       },
       vpsTasks: "vps configuration and Backend deployment",
       mobDevTasks: "Develop android and ios mobile application",
@@ -433,6 +437,9 @@ const messages = {
       ideo: {
         description: "L'application IDEO GROUPE est destinée a l'usage des agents IDEO."
       },
+      lost: {
+        description: "L'application vous permet d'ajouter des messages pour les choses que vous avez perdues ou les choses que vous avez trouvées pour les livrer à leurs propriétaires."
+      },
       vpsTasks: "Configuration du vps et deployment du Backend",
       mobDevTasks: "Développer une application mobile android et ios",
       androidDeploy: "Déploiement sur play store",
@@ -443,11 +450,13 @@ const messages = {
   }
 }
 
+const currentLang = new URLSearchParams(window.location.search).get('lang');
+
 const i18n = VueI18n.createI18n({
-  locale: 'fr', // set locale
+  locale: currentLang || 'fr', // set locale
   fallbackLocale: 'en', // set fallback locale
   messages
 })
 
 vueApp.use(i18n)
-vueApp.mount('#top')
+vueApp.mount('#app')

@@ -12,14 +12,14 @@
   <link href="css/main.css" rel="stylesheet">
 </head>
 
-<body id="top">
+<body id="app">
   <div v-cloak>
     <header>
       <div class="container text-center text-lg-left">
         <div class="language-container py-2 clearfix d-flex align-items-center justify-content-between">
           <h1 class="mb-0 d-flex align-items-center language-select">
             <div>{{ $t('language') }}</div>
-            <select title="languages" class="text-capitalize mx-1 form-select form-select-sm w-auto btn-outline-danger"
+            <select title="languages" class="text-capitalize mx-1 form-select form-select-sm w-auto btn-outline-warning"
               v-model="$i18n.locale">
               <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
                 {{ lang }}
@@ -52,6 +52,11 @@
         <h1>Mohamed Fahmi Chaar</h1>
         <h4>{{ $t('header.skills') }}</h4>
         <div class="text-samll mb-4">{{ $t('about.content') }}</div>
+        <div class="skills mb-4">
+          <div class='badge py-1 mb-1 me-1' style='font-weight: normal;'
+            v-for="skill in skills" :key="skill"
+          >{{ skill }}</div>
+        </div>
         <img class="about-section-image w-100" src="/images/hero-devices.svg" alt="hero-devices">
       </div>
     </section>
