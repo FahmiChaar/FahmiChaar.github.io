@@ -178,6 +178,7 @@ const vueApp = createApp({
         },
         {
           name: 'Lost & Found',
+          logo: 'lost.png',
           app: 'lost-app.png',
           description: 'projects.lost.description',
           tasks: ['projects.mobDevTasks'],
