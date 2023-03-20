@@ -187,7 +187,7 @@ const vueApp = createApp({
         },
         {
           name: 'EverShipp',
-          app: 'everShipp-app.png',
+          app: 'evershipp-app.png',
           description: '',
           tasks: ['projects.mobDevTasks'],
           tools: 'Ionic v1, Angular js, Cordova',
