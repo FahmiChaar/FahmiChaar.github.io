@@ -206,7 +206,7 @@ const vueApp = createApp({
           }
         }
       ],
-      skills: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Angular', 'Ionic Framework', 'Vue', 'React', 'Vuetify', 'TailwindCss', 'Git', 'Laravel' ]
+      skills: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Angular', 'Typescript', 'Ionic Framework', 'Vue', 'React', 'Vuetify', 'TailwindCss', 'Git', 'Node js', 'PHP', 'Laravel' ]
     }
   },
   mounted() {
