@@ -32,6 +32,24 @@ const vueApp = createApp({
           }
         },
         {
+          name: 'Ennakl Contracts',
+          logo: 'ennakl.png',
+          app: 'ennakl-app.png',
+          description: 'projects.ennakl.description',
+          tasks: ['projects.jogetDevTasks'],
+          tools: 'Joget DX7, Java, Html, Css, Javascript',
+          links: {}
+        },
+        {
+          name: 'Hertz',
+          logo: 'hertz.png',
+          app: 'hertz-app.png',
+          description: 'projects.hertz.description',
+          tasks: ['projects.jogetDevTasks'],
+          tools: 'Joget DX7, Java, Html, Css, Javascript',
+          links: {}
+        },
+        {
           name: 'IDEO GROUPE',
           logo: 'ideo.png',
           app: 'ideo-app.png',
@@ -206,7 +224,7 @@ const vueApp = createApp({
           }
         }
       ],
-      skills: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Angular', 'Typescript', 'Ionic Framework', 'Vue', 'React', 'Vuetify', 'TailwindCss', 'Git', 'Node js', 'PHP', 'Laravel' ]
+      skills: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Angular', 'Typescript', 'Ionic Framework', 'Vue', 'React', 'Vuetify', 'TailwindCss', 'Git', 'Node js', 'PHP', 'Laravel', 'Lowcode', 'Joget' ]
     }
   },
   mounted() {
@@ -260,6 +278,11 @@ const messages = {
         title: "Mobile & Full Stack Developer",
         company: "at Converto Agency",
         content: "I develop mobile applications with ionic framework as my main job, and i'm Full Stack developer, i use laravel framework for the back-end, vue js and inertia js for the front-end we created many projects with this stack."
+      },
+      converto: {
+        title: "Lowcode Developer",
+        company: "at Wevioo",
+        content: "."
       }
     },
     education: {
@@ -297,6 +320,12 @@ const messages = {
       },
       bizznass: {
         description: "Bizznass connects SMEs and individuals to Alibaba and Amazon market places by providing complete solutions of purchasing."
+      },
+      ennakl: {
+        description: "Developing a platform with Joget to manage repair contracts for Ennakl Automobile Company."
+      },
+      hertz: {
+        description: "Developing a platform with Joget to manage reservations for Hertz tunisia Company."
       },
       haval: {
         description: "Template integration"
@@ -408,6 +437,12 @@ const messages = {
       },
       bizznass: {
         description: "Bizznass connecte les PME et les particuliers aux places de marché Alibaba et Amazon en fournissant des solutions complètes d'achat",
+      },
+      ennakl: {
+        description: "Développement d'une plateforme avec Joget pour gérer les contrats de réparation pour la société Ennakl Automobile."
+      },
+      hertz: {
+        description: "Développement d'une plateforme avec Joget pour gérer les réservations pour la société Hertz Tunisie."
       },
       haval: {
         description: "Intégration de templates"
